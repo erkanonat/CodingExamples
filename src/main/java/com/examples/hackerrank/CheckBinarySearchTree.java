@@ -11,9 +11,55 @@ public class CheckBinarySearchTree {
         // Yes 1 2 3 4 5 6 7
         // No 1 2 4 3 5 6 7
         // Yes 3 5 7 9 11 13 15
-        Node n = new Node();
-        n.data=5;
+        Node root = new Node(1);
+        
 
+    }
+
+    // insert 
+
+
+    // delete 
+    public void delete(Node node , int value){
+        if(value==node.data){
+            Node temp = node;
+            
+        }
+    }
+
+    // get minValue
+    public int getMinValue(Node node ){
+        // iterate over while 
+        int min = node.data;
+        while(node.left!=null) {         
+            min = node.left.data;    
+            node = node.left;
+        }
+        return min;
+        // other alternative recursive 
+        
+    }
+
+ 
+    public boolean search(Node root,  int src) {
+        if(root==null)
+            return false;
+        else if(src==root.data)
+            return true;
+        else if (src < root.data){
+            return search(root.left, src);
+        }else {
+            return search(root.right, src);
+        }
+    }
+
+    // recursively traverse the BST  
+    public void printBST(Node root) { 
+        if (root != null) { 
+            printBST(root.left); 
+            System.out.print(root.data + " "); 
+            printBST(root.right); 
+        } 
     }
 
     public boolean checkBST(Node root) {
