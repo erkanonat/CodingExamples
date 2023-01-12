@@ -4,7 +4,7 @@ import java.util.Stack;
 
 public class StoneWall {
 
-    public int solution(int[] H) {
+    public static int solution(int[] H) {
 
         // e.g. H[0] = 2 would be a block of size (0, 2)
         Block currentBlock = new Block(0, H[0]);
@@ -43,7 +43,7 @@ public class StoneWall {
         return blocksRequired;
     }
 
-    class Block {
+    static  class Block {
         int lowerHeight;
         int upperHeight;
 
