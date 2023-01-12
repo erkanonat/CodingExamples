@@ -3,16 +3,17 @@ package com.examples.hackerrank;
 import java.util.HashMap;
 import java.util.Map;
 
-class Node {
-    int data;
-    Node left;
-    Node right;
- }
+
 
 public class CheckBinarySearchTree {
     
     public static void main(String[] args) {
-        
+        // Yes 1 2 3 4 5 6 7
+        // No 1 2 4 3 5 6 7
+        // Yes 3 5 7 9 11 13 15
+        Node n = new Node();
+        n.data=5;
+
     }
 
     public boolean checkBST(Node root) {
